@@ -124,7 +124,7 @@ function changeMode() {
     } else if (mode.textContent === "Default") {
         body.style.cssText = "background-color: revert; color: revert;";
         buttons.forEach((button) => {
-            button.style.cssText = "color: revert; border: revert background-color: revert";
+            button.style.cssText = "color: revert; border: revert; background-color: revert";
         });
         mode.textContent = "Dark";
         categoryChoiceButton.style.cssText = "background-color: revert; border: revert; color: revert;";
