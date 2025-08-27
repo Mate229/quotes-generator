@@ -55,7 +55,43 @@ const footballQuotes = [
     {quote: "Old Trafford is called the Theatre of Dreams for a reason. It’s where you feel the weight of the past and the hope of the future.", author: "Wayne Rooney",},
 ];
 
-const allQuotes = [lifeQuotes, financeQuotes, chessQuotes, footballQuotes];
+const bookQuotes = [
+    {quote: "It is not the strength of the body that counts, but the strength of the spirit.", author: "J.R.R. Tolkien, The Lord of the Rings",},
+    {quote: "It is our choices, Harry, that show what we truly are, far more than our abilities.", author: "J.K. Rowling, Harry Potter and the Chamber of Secrets",},
+    {quote: "Time is the longest distance between two places.", author: "Tennessee Williams, The Glass Menagerie",},
+    {quote: "Man is the only creature who refuses to be what he is.", author: "Albert Camus, The Rebel",},
+    {quote: "The world breaks everyone, and afterward, many are strong at the broken places.", author: "Ernest Hemingway, A Farewell to Arms",},
+    {quote: "The things you own end up owning you.", author: "Chuck Palahniuk, Fight Club",},
+    {quote: "I must not fear. Fear is the mind-killer.", author: "Frank Herbert, Dune",},
+    {quote: "None are more hopelessly enslaved than those who falsely believe they are free.", author: "Johann Wolfgang von Goethe, Elective Affinities",},
+    {quote: "Hell is other people.", author: "Jean-Paul Sartre, No Exit",},
+    {quote: "The only true wisdom is in knowing you know nothing.", author: "Attributed to Socrates (Plato’s Apology)",},
+    {quote: "Every word you speak is a boomerang. Your words return to you with amazing accuracy.", author: "Florence Scovel Shinn",},
+    {quote: "Faith knows it has already received and acts accordingly.", author: "Florence Scovel Shinn",},
+    {quote: "Whatever man feels deeply or imagines clearly, is impressed upon the subconscious mind, and carried out in minutest detail.", author: "Florence Scovel Shinn",},
+    {quote: "Man can only receive what he sees himself receiving.", author: "Florence Scovel Shinn",},
+    {quote: "The game of life is a game of boomerangs. Our thoughts, deeds and words return to us sooner or later, with astounding accuracy.", author: "Florence Scovel Shinn",},
+];
+
+const funnyQuotes = [
+    {quote: "Too much praise makes the cat think it is a lion.", author: "Anonymous",},
+    {quote: "Even the shadow of a palm tree believes it is a tree.", author: "Anonymous",},
+    {quote: "When the monkey tries to imitate man, it forgets it has a tail.", author: "Anonymous",},
+    {quote: "He who eats alone, dies alone… especially if he overeats.", author: "Anonymous",},
+    {quote: "The fly that does not heed advice follows the corpse into the grave.", author: "Anonymous",},
+    {quote: "Even if the lizard nods its head, it doesn’t mean it understands the speech.", author: "Anonymous",},
+    {quote: "He who runs after luck may end up overtaking it.", author: "Anonymous",},
+    {quote: "The mosquito that thinks it’s an eagle ends up smashed on the wall.", author: "Anonymous",},
+    {quote: "Even the rooster needs the night before it can crow in the morning.", author: "Anonymous",},
+    {quote: "If you see a goat on top of a tree, someone helped it climb.", author: "Anonymous",},
+    {quote: "Life is not a porno… you don’t always get what you expect.", author: "Anonymous",},
+    {quote: "Life is like a Wi-Fi signal — just when you need it most, it drops.", author: "Anonymous",},
+    {quote: "Even a clock that doesn’t work is right twice a day.", author: "Anonymous",},
+    {quote: "Rumors are carried by haters, spread by fools, and accepted by idiots.", author: "Anonymous",},
+    {quote: "Marriage is like a workshop — the husband works and the wife shops.", author: "Anonymous",},
+]
+
+const allQuotes = [lifeQuotes, financeQuotes, chessQuotes, footballQuotes, bookQuotes, funnyQuotes];
 const quoteDisplay = document.querySelector("#quote");
 const author = document.querySelector("#author");
 const randomQuote = document.querySelector("#new");
@@ -90,6 +126,16 @@ function generateRandomQuote(choice) {
             const footballChoice = Math.floor(Math.random() * footballQuotes.length);
             quoteDisplay.textContent = footballQuotes[footballChoice]["quote"];
             author.textContent = footballQuotes[footballChoice]["author"];
+            break;
+        case "book":
+            const bookChoice = Math.floor(Math.random() * bookQuotes.length);
+            quoteDisplay.textContent = bookQuotes[bookChoice]["quote"];
+            author.textContent = bookQuotes[bookChoice]["author"];
+            break;
+        case "funny":
+            const funnyChoice = Math.floor(Math.random() * funnyQuotes.length);
+            quoteDisplay.textContent = funnyQuotes[funnyChoice]["quote"];
+            author.textContent = funnyQuotes[funnyChoice]["author"];
             break;
     };
 };
